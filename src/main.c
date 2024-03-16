@@ -189,7 +189,6 @@ Response handle_request(Request req) {
         Route *check_route = (Route *)route_node->data;
 
         if (req.path.method != check_route->method) {
-            printf("methods dont match \n");
             route_node = route_node->next;
             continue;
         };
